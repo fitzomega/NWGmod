@@ -83,7 +83,24 @@ nuke = {
 		
 		custom_tooltip_fail = {
 			text = "war_demand_nuke_mil"
-			ROOT = { has_ethic = ethic_fanatic_militarist  }
+			ROOT = { 
+				OR = { 
+					has_ethic = ethic_fanatic_militarist  
+					AND = {
+						OR = { 
+							has_ethic = ethic_xenophobe
+							has_ethic = ethic_fanatic_xenophobe
+						}
+						parameter:planet = {
+							any_pop = {
+								NOT = {
+									is_same_species = ROOT 
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 		
 		
@@ -225,7 +242,23 @@ nuke = {
 					modifier = opinion_nuked_us
 				}
 			}
+			
+			every_country = {  #mimic on_actions -> people with this policy like the change 
+				limit = {
+					has_communications = ROOT 
+					NOT = { is_country = ROOT }
+					NOT = { is_country_type = fallen_empire }
+					NOT = {
+						OR = {
+							has_ethic = ethic_militarist
+							has_ethic = ethic_fanatic_militarist
+						}
+					}
+				}
+				add_opinion_modifier = { who = ROOT modifier = opinion_nuked_a_world }
+			}
 		}
+			
 	}
 
 	

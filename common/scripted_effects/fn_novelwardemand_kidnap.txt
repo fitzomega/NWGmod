@@ -35,6 +35,7 @@ fn_novelwardemand_kidnap{
 				add_modifier = { #they're not too happy about it   
 					modifier = pop_kidnapped
 					days = 9000  # one generation in some sense
+					clear_on_owner_change = yes
 				}
 			
 				fn_novelwardemand_setethic = yes # set ethics

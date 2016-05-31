@@ -24,6 +24,7 @@ war_demand_fitz_force_free_thoughts_tooltip_proper_content:1 "[GetCountry.GetNam
 
 war_demand_fitz_free_thoughts_wrong_type:0 "Entities like this do not really understand what free thoughts is ..."
 war_demand_fitz_free_thoughts_no_planets:0 "All of the Empire's planets will be ceded, try making the cold empty space think freely"
+war_demand_force_free_thought_not_individualist:0 "Only Individualists would be able to accomplish this"
 
 fitz_forced_free_thoughts:0 "Forced free thoughts from war"
 opinion_fitz_free_thoughts_country:0 "Forced free thoughts on us"
@@ -47,6 +48,6 @@ war_demand_fitz_hack_technology_tooltip_proper_content:1 "[GetCountry.GetName] w
 war_demand_fitz_free_thoughts_wrong_type:0 "Entities like this do not really do research ..."
 war_demand_fitz_free_thoughts_no_planets:0 "All of the Empire's planets will be ceded, try hacking the cold empty space"
 
-fitz_hacking:0 "Hack of data"
-opinion_fitz_free_thoughts_country:0 "Forced free thoughts on us"
+fitz_hacking:0 "Access to foreign data streams"
+#opinion_fitz_free_thoughts_country:0 "Forced free thoughts on us" 
 

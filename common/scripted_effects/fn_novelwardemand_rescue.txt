@@ -40,6 +40,7 @@ fn_novelwardemand_rescue{
 			add_modifier = { 
 				modifier = pop_rescued
 				days = 1800  # 5 years a slave 
+				clear_on_owner_change = yes
 			}
 			
 			fn_novelwardemand_setethic = yes # set ethics

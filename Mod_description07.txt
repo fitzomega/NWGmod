@@ -1,0 +1,75 @@
+[h1]Novel War Goals - completely new wargoals  [ENG/GER] [/h1]
+
+
+This mod adds several new war goal types to Stellaris to give you (and the AI) more options for your offensive diplomacy. It is compatible with all other mods as it only adds new files. The AI tends to use these wargoals as well, although I am still ironing out some details there.
+Right now 11 wargoals are added to the game.
+
+I also implemented a "sphere of influence" type of vassal, which will be most useful if you want to force border access in the late game.
+
+
+
+-----------------------Added Wargoals:----------------------------------------------------
+
+
+1) [b]Enslave population[/b]
+Up to ten populations from the target planet are enslaved and brought to designated planets in the attacking empire. Requires occupation.
+
+2) [b]Rescue population[/b]
+The reverse of Enslavement. All populations belonging to your species are rescued from an enemy planet and make it back into your empire.
+
+3) [b]Raze planet[/b]
+All buildings will be destroyed. Some people might die. It's not nice. Requires occupation.
+(available with limited/heavy bombardment poliicies)
+
+4) [b]Demilitarize planet[/b]
+All war-relevant buildings on the planet will be destroyed. Although this option is still nicer than raze, it is still a major setback for the defeated.
+(Available with light bombardment policies)
+
+5) [b]Nuke planet[/b]
+The planet will be nuked from key positions in lower orbit and turned into a toxic tomb world. Not a nice thing at all.
+Only available for fanatic militarists with full bombardment policy. Needs planetary occupation.
+
+6) [b]Force into sphere of influence[/b]
+Forces the defeated into your sphere of influence for 10 years. This should drop them from all alliances and federations and stop them from rejoining.
+Technically they are now a subject of yours, allthough they do not join wars and can still do limited diplomacy and all those things.
+Conveniently this also gives you access to their territory and sensors.
+The galactic ambitions technology is necessary to use this wargoal.
+
+7) [b]Humiliate country[/b]
+The defeated country is humiliated (similar to the AI fallen empire wargoal), loses 250 influence and gets the debuff.
+Conveniently you gain these 250 influence. Added as a way to gain influence by war.
+
+8) [b]Raid mineral stockpiles[/b]
+Very simple. Up to 5000 minerals of what is left from their stockpile after the war are transferred to you.
+
+9) [b]Raid energy stockpiles[/b]
+Works like mineral raids
+
+10) [b]Install democratic government[/b]
+The ruler of the enemy country is deposed (= killed ...) and a new indirect democracy is formed. Free elections are held shortly after.
+
+11) [b] Expel population [/b]
+All inhabitants of a planet will be expelled, so that someone else might colonize it. This is the evil option, I plan to make a "force resettle" option at some point. Expel population does not care if they have a place to flee to.
+[Needs purge policy for obvious reasons]
+
+-----------------------------------------INFO-----------------------------------------------------
+[i]Supported Game Version:[/i] 1.0.3
+[i]Mod Version:[/i] 0.7
+[i]Steam ID:[/i] 687477152
+[i]Languages:[/i] English / German
+[i]Compability:[/i] compatible with all other mods as only new files are created. So the mod is even  compatible with the other war goal mods.
+[i]Performance:[/i] Until Paradox fixes the overwrite issue with the on_actions file, the mod will use mtth events. This will lead to a minuscule performance hit.
+-----------------------------------------------------------------------------------------------------
+
+----------------------------------------Known Bugs:---------------------------------------------
+
+I think there is something odd going on with how the localization handles country names. I will investigate that further.
+There will sometimes be an error notification that some wargoal fromfromfrom in nuke is incorrect. I have no idea why this error is shown and it does not seem to have any gameplay effects
+
+----------------------------------------Future Plans: --------------------------------------------
+
+- Policy change wargoals for all fanatics
+- Conversion campaigns for spritualists and atheist campaigns for materialists
+- Resettle population
+- Steal Robots
+- Get enforce peace to work

@@ -29,7 +29,7 @@ opinion_humiliated_country = {
 		base = 2
 	}
 }
-
+# for nuking
 opinion_nuked_us = {
 	opinion = {
 		base = -250
@@ -41,6 +41,19 @@ opinion_nuked_us = {
 	
 	decay = {
 		base = 1
+	}
+}
+opinion_nuked_a_world = {
+	opinion = {
+		base = -40
+	}
+	
+	accumulative = yes
+	
+	min = -400
+	
+	decay = {
+		base = 2
 	}
 }
 # for enforce_peace
@@ -71,3 +84,61 @@ opinion_intervened_against_us = {
 		base = 3
 	}
 }
+
+
+#for policy change wargoals
+opinion_interfered_with_our_politics = {
+	opinion = {
+		base = -50
+	}
+	
+	accumulative = yes
+	
+	min = -500
+	
+	decay = {
+		base = 3
+	}
+}
+opinion_policy_good = {
+	opinion = {
+		base = 15
+	}
+	
+	accumulative = yes
+	
+	min = -500
+	
+	decay = {
+		base = 3
+	}
+}
+opinion_policy_bad = {
+	opinion = {
+		base = -15
+	}
+	
+	accumulative = yes
+	
+	min = -500
+	
+	decay = {
+		base = 3
+	}
+}
+
+opinion_scourge_of_the_galaxy = {
+	opinion = {
+		base = -1000
+	}
+	
+	accumulative = no
+	
+	min = -1000
+	
+	decay = {
+		base = 1
+	}
+}
+
+
