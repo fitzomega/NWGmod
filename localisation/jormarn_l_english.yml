@@ -181,11 +181,11 @@
  #war_demand_enforce_peace_no_war
  #war_enforce_peace_win_war
  # Policy Change Wargoals
- war_demand_policies_already_has_policy:0 "Das Ziel verfolgt diese Richtlinie bereits."
- war_demand_policies_hypocrites:0 "Wir müssen diese Richtlinie selbst verfolgen."
- war_demand_policies_ethics_lock:0 "Nur Reiche mit einem bestimmten Ethos können dieses Ziel verfolgen."
- war_demand_policies_wrong_type:0 "Diese Entität versteht nichts von politischen Richtlinien"
- war_demand_policies_no_planets:0 "Diese Entität wird nach dem Krieg keine Planeten mehr besitzen."
+ war_demand_policies_already_has_policy:0 "The target already has this policy" 
+ war_demand_policies_hypocrites:0 "We must adhere to this policy ourselves" 
+ war_demand_policies_ethics_lock:0 "Only specific ethics can use this wargoal" 
+ war_demand_policies_wrong_type:0 "This entity has no concept of policies" 
+ war_demand_policies_no_planets:0 "This entity will have no planets left after the war"
  ##policies:
  #1) limit bombardment ##
  DEMAND_POLICY_LIMIT_BOMBARDMENT:0 "Impose light bombardment protocolls"
