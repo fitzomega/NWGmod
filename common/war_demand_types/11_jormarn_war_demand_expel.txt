@@ -185,6 +185,7 @@ expel = {
 						add_modifier = { #
 							modifier = pop_expelled
 								days = 720  # 2 years, just for RP, should not be the reason for enemy failcascade
+								clear_on_owner_change = yes
 						}
 						
 						fn_novelwardemand_setethic = yes

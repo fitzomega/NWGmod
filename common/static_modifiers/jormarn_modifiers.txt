@@ -19,3 +19,9 @@ pop_expelled = {
 }
 
 
+# used for supremacy and xenoplague
+
+pop_scourge_of_the_galaxy = {
+	pop_happiness = -0.25
+}
+

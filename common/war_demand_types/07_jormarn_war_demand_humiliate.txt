@@ -8,7 +8,7 @@ humiliate_jormarn = {
 	}
 	
 	warscore_cost = {
-		base = 15
+		base = 45
 
 		scaled_modifier = {
 			scope = parameter:country
@@ -25,11 +25,16 @@ humiliate_jormarn = {
 		# Or maybe make it that if you manage to force a bigger empire to surrender, you can pay influence point to humiliate them? :)
 		# Will look if it's possible.
 
-		scaled_modifier = {
-			scope = fromfromfrom
-			div = 0.001 
-			calc = pop_count
-		}
+		
+		#jormarn: 0.001 fills my error log with division-by-zero errors - maybe this has something to do with the operating system ?? 
+		# turned it off for now
+		
+		
+		#scaled_modifier = {
+		#	scope = fromfromfrom
+		#	div = 0.001 
+		#	calc = pop_count
+		#}
 		
 		# Ruler Trait - Warlike
 		modifier = {

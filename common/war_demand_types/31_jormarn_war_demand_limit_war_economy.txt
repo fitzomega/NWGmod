@@ -1,4 +1,4 @@
-make_democracy = {
+policy_limit_war_economy = {
 	execution_order = 1
 	
 	parameters = {
@@ -8,7 +8,7 @@ make_democracy = {
 	}
 	
 	warscore_cost = {
-		base = 60
+		base = 25
 
 		scaled_modifier = {
 			scope = parameter:country
@@ -59,7 +59,7 @@ make_democracy = {
 
 	potential = {
 		custom_tooltip_fail = {
-			text = "war_demand_force_sphere_not_opponent" #this is generic, no reloc ness
+			text = "war_demand_not_opponent" #this is generic, no reloc ness
 			parameter:country = {
 				OR = {
 					AND = {
@@ -87,22 +87,29 @@ make_democracy = {
 		}
 		
 		custom_tooltip_fail = {
-			text = "war_demand_make_democracy_already_democracy"
+			text = "war_demand_policies_already_has_policy"
 			parameter:country = {
-				NOT =  { has_election_type = democratic }
+				NOT =  { 
+					has_policy_flag = versatile_we
 				}
+			}
 		}
+		
 		custom_tooltip_fail = {
-			text = "war_make_democracy_we_no_democracy"
+			text = "war_demand_policies_ethics_lock"
 			ROOT = {
-				 has_election_type = democratic 
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
 				}
+			}
 		}
 		
 		
 		
+		
 		custom_tooltip_fail = {
-			text = "war_make_democracy_wrong_type"
+			text = "war_demand_policies_wrong_type"
 			parameter:country = {
 				is_country_type = default 
 			}
@@ -114,7 +121,7 @@ make_democracy = {
 		hidden:parameter:country = {
 
 			custom_tooltip_fail = {
-				text = "war_demand_make_democracy_no_planets"
+				text = "war_demand_policies_no_planets"
 				war_demand_counter = {
 					type = num_owned_planets
 					value > 0
@@ -129,23 +136,35 @@ make_democracy = {
 	
 	effect = {
 		add_threat = {
-			who = fromfromfrom
-			amount = 2.5 # scales to pops
+			who = ROOT # root is planning this
+			amount = 1 # scales to pops
 		}		
 
 		
 		parameter:country = {
 		
-			change_government = "indirect_democracy" 
-			kill_leader = {
-				type = ruler
-				show_notification = yes
+			hidden_effect = {  #no idea why this is here, but the FE wargoals also work like this
+				set_policy = {
+					policy = war_economy
+					option = versatile_we
+					cooldown = yes
+				}
 			}
-			
-			####
+			add_opinion_modifier = { 
+				who = ROOT
+				modifier = opinion_interfered_with_our_politics
+			}
 		}
 		
-		
+		every_country = {  #mimic on_actions -> people with this policy like the change 
+			limit = {
+				has_communications = ROOT 
+				NOT = { is_country = ROOT }
+				NOT = { has_policy_flag = versatile_we }
+			}
+			add_opinion_modifier = { who = ROOT modifier = opinion_policy_good }
+		}
+	
 	}
 	
 	#counters = { #none
@@ -153,18 +172,29 @@ make_democracy = {
 	#}
 	
 	ai_weight = {
-		base = 120
+		base = 10
 		
 		modifier = {
-			factor = 0.01
-			this = { NOT = { has_ai_personality = democratic_crusaders } } 
+			factor = 10
+			this = { has_ai_personality = peaceful_traders } 
 		}
 		modifier = {
-			factor = 5
+			factor = 10
 			this = { has_ai_personality = federation_builders } 
 		}
+		modifier = {
+			factor = 10
+			this = { has_ai_personality = spiritual_seekers }  
+		}
+		
+		modifier = {
+			factor = 0
+			is_country_type = fallen_empire
+		}
+		## add military interventionists when they are ingame
 
 	}
+	
 	
 	## end of file
 	

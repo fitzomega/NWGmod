@@ -180,7 +180,90 @@
  #war_enforce_peace_wrong_type
  #war_demand_enforce_peace_no_war
  #war_enforce_peace_win_war
- 
+ # Policy Change Wargoals
+ war_demand_policies_already_has_policy:0 "The target already has this policy"
+ war_demand_policies_hypocrites:0 "We must adhere to this policy ourselves"
+ war_demand_policies_ethics_lock:0 "Only specific ethics can use this wargoal"
+ war_demand_policies_wrong_type:0 "This entity has no concept of policies"
+ war_demand_policies_no_planets:0 "This entity will have no planets left after the war"
+ ##policies:
+ #1) limit bombardment ##
+ DEMAND_POLICY_LIMIT_BOMBARDMENT:0 "POLICY_LIMIT_BOMBARDMENT the inhabitants of $PLANET|H$"
+ DEMAND_POLICY_LIMIT_BOMBARDMENT_TITLE:0 "§RPOLICY_LIMIT_BOMBARDMENT§!: $POPULATION|H$"
+ DEMAND_POLICY_LIMIT_BOMBARDMENT_INFO:0 "POLICY_LIMIT_BOMBARDMENTled, whether they have escape ships or not..."
+ DEMAND_POLICY_LIMIT_BOMBARDMENT_INFO_SOLO:0 "All inhabitants of this planet will be forcibly POLICY_LIMIT_BOMBARDMENTled, whether they have escape ships or not..."
+ war_demand_policy_limit_bombardment_header:1 "§Rpolicy_limit_bombardment Population§!"
+ war_demand_policy_limit_bombardment_subtext:1 "[parameter:planet.GetName] ([parameter:planet.GetStarName])"
+ war_demand_policy_limit_bombardment_tooltip_header:0 "policy_limit_bombardment Population"
+ war_demand_policy_limit_bombardment_tooltip_content:2 "[parameter:planet.GetName]"
+ war_demand_policy_limit_bombardment_tooltip_proper_header:1 "$war_demand_policy_limit_bombardment_header$"
+ war_demand_policy_limit_bombardment_tooltip_proper_content:2 "$war_demand_policy_limit_bombardment_tooltip_content$"
+ #2) limit Slavery ##
+ DEMAND_POLICY_LIMIT_SLAVERY:0 "POLICY_LIMIT_SLAVERY the inhabitants of $PLANET|H$"
+ DEMAND_POLICY_LIMIT_SLAVERY_TITLE:0 "§RPOLICY_LIMIT_SLAVERY§!: $POPULATION|H$"
+ DEMAND_POLICY_LIMIT_SLAVERY_INFO:0 "POLICY_LIMIT_SLAVERYled, whether they have escape ships or not..."
+ DEMAND_POLICY_LIMIT_SLAVERY_INFO_SOLO:0 "All inhabitants of this planet will be forcibly POLICY_LIMIT_SLAVERYled, whether they have escape ships or not..."
+ war_demand_policy_limit_slavery_header:1 "§Rpolicy_limit_slavery Population§!"
+ war_demand_policy_limit_slavery_subtext:1 "[parameter:planet.GetName] ([parameter:planet.GetStarName])"
+ war_demand_policy_limit_slavery_tooltip_header:0 "policy_limit_slavery Population"
+ war_demand_policy_limit_slavery_tooltip_content:2 "[parameter:planet.GetName]"
+ war_demand_policy_limit_slavery_tooltip_proper_header:1 "$war_demand_policy_limit_slavery_header$"
+ war_demand_policy_limit_slavery_tooltip_proper_content:2 "$war_demand_policy_limit_slavery_tooltip_content$"
+ #3) limit AI ##
+ DEMAND_POLICY_LIMIT_AI:0 "POLICY_LIMIT_AI the inhabitants of $PLANET|H$"
+ DEMAND_POLICY_LIMIT_AI_TITLE:0 "§RPOLICY_LIMIT_AI§!: $POPULATION|H$"
+ DEMAND_POLICY_LIMIT_AI_INFO:0 "POLICY_LIMIT_AIled, whether they have escape ships or not..."
+ DEMAND_POLICY_LIMIT_AI_INFO_SOLO:0 "All inhabitants of this planet will be forcibly POLICY_LIMIT_AIled, whether they have escape ships or not..."
+ war_demand_policy_limit_ai_header:1 "§Rpolicy_limit_ai Population§!"
+ war_demand_policy_limit_ai_subtext:1 "[parameter:planet.GetName] ([parameter:planet.GetStarName])"
+ war_demand_policy_limit_ai_tooltip_header:0 "policy_limit_ai Population"
+ war_demand_policy_limit_ai_tooltip_content:2 "[parameter:planet.GetName]"
+ war_demand_policy_limit_ai_tooltip_proper_header:1 "$war_demand_policy_limit_ai_header$"
+ war_demand_policy_limit_ai_tooltip_proper_content:2 "$war_demand_policy_limit_ai_tooltip_content$"
+ #4) allow AI ##
+ DEMAND_POLICY_ALLOW_AI:0 "POLICY_ALLOW_AI the inhabitants of $PLANET|H$"
+ DEMAND_POLICY_ALLOW_AI_TITLE:0 "§RPOLICY_ALLOW_AI§!: $POPULATION|H$"
+ DEMAND_POLICY_ALLOW_AI_INFO:0 "POLICY_ALLOW_AIled, whether they have escape ships or not..."
+ DEMAND_POLICY_ALLOW_AI_INFO_SOLO:0 "All inhabitants of this planet will be forcibly POLICY_ALLOW_AIled, whether they have escape ships or not..."
+ war_demand_policy_allow_ai_header:1 "§Rpolicy_allow_ai Population§!"
+ war_demand_policy_allow_ai_subtext:1 "[parameter:planet.GetName] ([parameter:planet.GetStarName])"
+ war_demand_policy_allow_ai_tooltip_header:0 "policy_allow_ai Population"
+ war_demand_policy_allow_ai_tooltip_content:2 "[parameter:planet.GetName]"
+ war_demand_policy_allow_ai_tooltip_proper_header:1 "$war_demand_policy_allow_ai_header$"
+ war_demand_policy_allow_ai_tooltip_proper_content:2 "$war_demand_policy_allow_ai_tooltip_content$"
+ #5) limit migration ##
+ DEMAND_POLICY_LIMIT_MIGRATION:0 "POLICY_LIMIT_MIGRATION the inhabitants of $PLANET|H$"
+ DEMAND_POLICY_LIMIT_MIGRATION_TITLE:0 "§RPOLICY_LIMIT_MIGRATION§!: $POPULATION|H$"
+ DEMAND_POLICY_LIMIT_MIGRATION_INFO:0 "POLICY_LIMIT_MIGRATIONled, whether they have escape ships or not..."
+ DEMAND_POLICY_LIMIT_MIGRATION_INFO_SOLO:0 "All inhabitants of this planet will be forcibly POLICY_LIMIT_MIGRATIONled, whether they have escape ships or not..."
+ war_demand_policy_limit_migration_header:1 "§Rpolicy_limit_migration Population§!"
+ war_demand_policy_limit_migration_subtext:1 "[parameter:planet.GetName] ([parameter:planet.GetStarName])"
+ war_demand_policy_limit_migration_tooltip_header:0 "policy_limit_migration Population"
+ war_demand_policy_limit_migration_tooltip_content:2 "[parameter:planet.GetName]"
+ war_demand_policy_limit_migration_tooltip_proper_header:1 "$war_demand_policy_limit_migration_header$"
+ war_demand_policy_limit_migration_tooltip_proper_content:2 "$war_demand_policy_limit_migration_tooltip_content$"
+ #6) limit enlightenment ##
+ DEMAND_POLICY_LIMIT_NATIVES:0 "POLICY_LIMIT_NATIVES the inhabitants of $PLANET|H$"
+ DEMAND_POLICY_LIMIT_NATIVES_TITLE:0 "§RPOLICY_LIMIT_NATIVES§!: $POPULATION|H$"
+ DEMAND_POLICY_LIMIT_NATIVES_INFO:0 "POLICY_LIMIT_NATIVESled, whether they have escape ships or not..."
+ DEMAND_POLICY_LIMIT_NATIVES_INFO_SOLO:0 "All inhabitants of this planet will be forcibly POLICY_LIMIT_NATIVESled, whether they have escape ships or not..."
+ war_demand_policy_limit_natives_header:1 "§Rpolicy_limit_natives Population§!"
+ war_demand_policy_limit_natives_subtext:1 "[parameter:planet.GetName] ([parameter:planet.GetStarName])"
+ war_demand_policy_limit_natives_tooltip_header:0 "policy_limit_natives Population"
+ war_demand_policy_limit_natives_tooltip_content:2 "[parameter:planet.GetName]"
+ war_demand_policy_limit_natives_tooltip_proper_header:1 "$war_demand_policy_limit_natives_header$"
+ war_demand_policy_limit_natives_tooltip_proper_content:2 "$war_demand_policy_limit_natives_tooltip_content$"
+ #7) limit war economy ##
+ DEMAND_POLICY_LIMIT_WAR_ECONOMY:0 "POLICY_LIMIT_WAR_ECONOMY the inhabitants of $PLANET|H$"
+ DEMAND_POLICY_LIMIT_WAR_ECONOMY_TITLE:0 "§RPOLICY_LIMIT_WAR_ECONOMY§!: $POPULATION|H$"
+ DEMAND_POLICY_LIMIT_WAR_ECONOMY_INFO:0 "POLICY_LIMIT_WAR_ECONOMYled, whether they have escape ships or not..."
+ DEMAND_POLICY_LIMIT_WAR_ECONOMY_INFO_SOLO:0 "All inhabitants of this planet will be forcibly POLICY_LIMIT_WAR_ECONOMYled, whether they have escape ships or not..."
+ war_demand_policy_limit_war_economy_header:1 "§Rpolicy_limit_war_economy Population§!"
+ war_demand_policy_limit_war_economy_subtext:1 "[parameter:planet.GetName] ([parameter:planet.GetStarName])"
+ war_demand_policy_limit_war_economy_tooltip_header:0 "policy_limit_war_economy Population"
+ war_demand_policy_limit_war_economy_tooltip_content:2 "[parameter:planet.GetName]"
+ war_demand_policy_limit_war_economy_tooltip_proper_header:1 "$war_demand_policy_limit_war_economy_header$"
+ war_demand_policy_limit_war_economy_tooltip_proper_content:2 "$war_demand_policy_limit_war_economy_tooltip_content$"
  
  
  #some custom_tool_fail
@@ -191,6 +274,9 @@
  war_demand_raze_fullbombs:0 "This option definitely not in accordance to light bombardement protocolls or any kind of pacifism."
  war_demand_demil_fullbombs:0 "This option is in accordance to light bombardement protocolls"
  war_demand_nuke_mil:0 "Only fanatic militarists would advocate this option."
+ war_demand_not_opponent:0 "This Empire is no longer an opponent" ##
+ war_demand_tech_missing:0 "We are missing a vital technology for this strategy" ##
+ war_demand_no_planets:0 "This entity will have no planets left after the war"
  
  ## Edict to Enslave
  
@@ -214,11 +300,16 @@
  pop_kidnapped:0 "Was kidnapped from home world"
  pop_rescued:0 "Was rescued from foreign empire"
  pop_expelled:0 "Forced to leave home planet"
+ pop_scourge_of_the_galaxy:0 "Our government is the scourge of the galaxy"
  # opinion modifers
  opinion_enslaved_pops:0 "Enslaved our population"
  opinion_humiliated_country:0 "Humiliated us"
  opinion_nuked_us:0 "Nuked one of our planets"
  opinion_intervened_against_us:0  "Intervened in a war against our interests"
  opinion_intervened_for_us:0 "Intervened in a war on our behalf"
-
- 
+ opinion_interfered_with_our_politics:0 "Interfered with our domestic politics" ##
+ opinion_policy_good:0 "Cchanged the policies of another country in a favourable way" ##
+ opinion_policy_bas:0 "Changed the policies of another country in an unfavourable way" ##
+ opinion_nuked_a_world:0 "Turned a habitable world into a toxic wasteland" ##
+ opinion_scourge_of_the_galaxy:0 "Vile scourge of the galaxy" ##
+  

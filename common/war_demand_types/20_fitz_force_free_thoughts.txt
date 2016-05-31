@@ -56,12 +56,16 @@ fitz_force_free_thoughts = {
 	}
 
 	potential = {
-		parameter:country ={
-			NOT = {	has_country_edict = encourage_free_thought	}
-		}
-		OR = {
-			has_ethic = ethic_fanatic_individualist
-			has_ethic = ethic_fanatic_individualist
+		
+		custom_tooltip_fail = {
+			text = "war_demand_force_free_thought_not_individualist"
+			parameter:country = {
+				NOT = {	has_edict = encourage_free_thought	}
+			}
+			OR = {
+				has_ethic = ethic_fanatic_individualist
+				has_ethic = ethic_individualist
+			}
 		}
 
 		custom_tooltip_fail = {
