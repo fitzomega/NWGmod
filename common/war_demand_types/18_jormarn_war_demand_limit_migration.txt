@@ -103,6 +103,9 @@ policy_limit_migration = {
 					has_ethic = ethic_fanatic_xenophobe
 				}
 			}
+			parameter:country = {
+				NOT = { is_same_species = ROOT }
+			}
 		}
 		
 		custom_tooltip_fail = {
