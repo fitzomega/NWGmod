@@ -108,6 +108,7 @@ xenoplague = {
 								is_same_species = ROOT
 								is_subspecies = ROOT
 								pop_has_trait = trait_resilient
+								is_robot_pop = yes
 							}
 						}
 					}
@@ -140,7 +141,10 @@ xenoplague = {
 			limit = {
 				has_communications = ROOT 
 				NOT = { is_country = ROOT }
-				NOT = { is_country_type = fallen_empire }
+				NOT = { 
+					is_country_type = fallen_empire 
+					has_ai_personality = fallen_empire_xenophile
+				}
 			}
 			add_opinion_modifier = { who = ROOT modifier = opinion_scourge_of_the_galaxy }
 		}

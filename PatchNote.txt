@@ -57,4 +57,13 @@ Unite species :
 	
 All Policy Change Wargoals : 
 	- Base cost 25
-	- scales to empire (in 1.1 ??) by 0.50
+
+Supremacy :
+	- warscore fixed to 100
+	- Needs "supremacy tech"
+	- annexes empire
+	
+Xenoplague :
+	- warscore fixed to 100
+	- Needs "xenoplague tech"
+	- wipes out all populations in target empire
