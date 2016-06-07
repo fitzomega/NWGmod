@@ -1,5 +1,5 @@
 xenoplague = {
-	execution_order = 0
+	execution_order = 10
 	
 	parameters = {
 		country = {

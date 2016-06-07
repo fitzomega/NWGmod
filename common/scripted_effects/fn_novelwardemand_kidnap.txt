@@ -6,7 +6,7 @@
 fn_novelwardemand_kidnap{ 
 	if = {
 		limit = { 
-			num_pops > 3 			# leave some old people behind
+			#num_pops > 3 			# leave some old people behind # scrapped for now, depopulation is now possible
 			fromfromfrom = {		# only take people if there is a nice room prepared
 				any_owned_planet = {
 						free_pop_tiles > 0
@@ -60,6 +60,69 @@ fn_novelwardemand_kidnap{
 			add_opinion_modifier = {
 				who = fromfromfrom
 				modifier = opinion_enslaved_pops
+			}
+		}
+		
+		# place on any planet if a special someone has forgotten so set the edict target
+		else = {
+			if = {
+				limit = {
+					fromfromfrom = {		# only take people if there is a nice room prepared
+						any_owned_planet = {
+							free_pop_tiles > 0
+						}
+					}
+				}
+				
+				random_pop = {
+					species = { save_event_target_as = slave_species }
+			
+					fromfromfrom = {
+						random_owned_planet = {
+							limit = { 
+								free_pop_tiles > 0
+							}
+							create_pop = {
+							species = event_target:slave_species    
+							}
+						}
+					}
+			
+					last_created_pop = {	
+
+						add_modifier = { #they're not too happy about it   
+							modifier = pop_kidnapped
+							days = 9000  # one generation in some sense
+							clear_on_owner_change = yes
+						}
+			
+						fn_novelwardemand_setethic = yes # set ethics
+	
+						enslave_pop = yes  
+					}
+				
+					# mimic action.22 (decent people hate slavery)
+					every_country = {
+						limit = {
+							has_communications = fromfromfrom
+							NOT = { is_country = fromfromfrom }
+							has_policy_flag = slavery_not_allowed
+						}
+						add_opinion_modifier = { who = fromfromfrom modifier = opinion_slaver }
+					}
+		
+					kill_pop = yes
+				}
+		
+				# add opinion about this for defender
+				owner = {
+					add_opinion_modifier = {
+						who = fromfromfrom
+						modifier = opinion_enslaved_pops
+					}
+				}
+				
+				
 			}
 		}
 	}

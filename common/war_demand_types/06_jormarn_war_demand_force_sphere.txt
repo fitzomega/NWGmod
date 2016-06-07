@@ -1,7 +1,7 @@
 ## Force a country to give be in your sphere of influence (Mostly give civ/mil access)
 
 force_sphere = {
-	execution_order = 4
+	execution_order = 2
 	
 	parameters = {
 		country = {
@@ -17,7 +17,11 @@ force_sphere = {
 			add = 0.25
 			calc = pop_count
 		}		
-		
+		scaled_modifier = {
+			scope = parameter:country
+			add = 4
+			calc = planets_in_country
+		}	
 		modifier = {
 			factor = 0.75
 			parameter:country = {
@@ -250,10 +254,10 @@ force_sphere = {
 	}
 	
 	ai_weight = {
-		base = 50
+		base = 20
 		
 		modifier = {
-			factor = 2
+			factor = 1.5
 			this =  { is_neighbor_of = parameter:country }
 		}
 		modifier = {

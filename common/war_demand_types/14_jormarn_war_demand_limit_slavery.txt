@@ -1,5 +1,5 @@
 policy_limit_slavery = {
-	execution_order = 1
+	execution_order = 3
 	
 	parameters = {
 		country = {
@@ -190,13 +190,24 @@ policy_limit_slavery = {
 		base = 10
 		
 		modifier = {
-			factor = 10
-			this = { has_ai_personality = democratic_crusaders } 
+			factor = 2.5
+			this = { 
+				OR = {
+					has_ai_personality = democratic_crusaders
+					has_ai_personality = honorbound_warriors
+				}
+			}
 		}
 		
 		modifier = {
-			factor = 10
-			this = { has_ai_personality = honorbound_warriors }
+			factor = 0
+			NOT = {
+				FROM = {
+					any_owned_pop = {
+						is_enslaved = yes
+					}
+				}
+			}
 		}
 		
 		modifier = {

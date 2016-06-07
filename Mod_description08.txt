@@ -73,7 +73,7 @@ Hacks enemy tech stream to gain tech bonus. Needs "assist research" technology t
 
 23) [b] Supremacy [/b]
 This is a late-game wargoal for militarists. It can be used to annex an entire empire in one swoop. Using this wargoal is limited to a tier3 technology that has to be researched first.
-Using it will also make "you" the end-game crisis fro the point of view of the other empires.
+Using it will also make "you" the end-game crisis from the point of view of the other empires.
 
 24) [b] The Xenoplague [/b]
 This is a late-game wargoal for xenophobes. It can be used wipe out the population of a full empire. Using this wargoal is limited to a tier3 technology that has to be researched first.
@@ -81,11 +81,11 @@ Using it will also make "you" the end-game crisis from the point of view of the 
 
 -----------------------------------------INFO-----------------------------------------------------
 [i]Contributor:[/i] FitzOmega
-[i]Supported Game Version:[/i] 1.0.3
+[i]Supported Game Version:[/i] 1.1.x 
 [i]Mod Version:[/i] 0.8
 [i]Steam ID:[/i] 687477152
 [i]Languages:[/i] English / German
-[i]Compability:[/i] compatible with all other mods as only new files are created. So the mod is even  compatible with the other war goal mods.
+[i]Compability:[/i] compatible with all other mods as only new files are created. So the mod is even  compatible with the other war goal mods (Although I think all their content has been subsumed by now)
 [i]Performance:[/i] Until 1.1.x there is an overwrite issue with the on_actions file, the mod will use mtth events. This will lead to a minuscule performance hit.
 -----------------------------------------------------------------------------------------------------
 
@@ -98,5 +98,7 @@ There will sometimes be an error notification that some wargoal fromfromfrom in 
 - Conversion campaigns for spritualists and atheist campaigns for materialists
 - Resettle population
 - Steal Robots
-- Get enforce peace to work (if YOU have any idea "how declare_white_peace_with" works, please contact me)
+- Get enforce peace to work (if YOU have any idea how "declare_white_peace_with" works, please contact me)
 - Upgrade some wargoals to align with the design style of 1.1.x
+- Steal actual technologies 
+- Steal rare technology (<- too overpowered ?)

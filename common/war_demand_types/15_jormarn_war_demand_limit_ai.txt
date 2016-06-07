@@ -1,5 +1,5 @@
 policy_limit_ai = {
-	execution_order = 1
+	execution_order = 3
 	
 	parameters = {
 		country = {
@@ -191,15 +191,16 @@ policy_limit_ai = {
 		base = 10
 		
 		modifier = {
-			factor = 10
-			OR = { 
-				this = { has_ai_personality = spiritual_seekers } 
-				this = { has_global_flag = ai_revolt_happened }
-			}
+			factor = 1.5
+			this = { has_ai_personality = spiritual_seekers } 
 		}
 		modifier = {
-			factor = 2
+			factor = 1.25
 			this = { has_global_flag = ai_revolt_happened }
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
 		}		
 		modifier = {
 			factor = 0

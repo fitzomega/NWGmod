@@ -1,5 +1,5 @@
 humiliate_jormarn = {
-	execution_order = 0
+	execution_order = 2
 	
 	parameters = {
 		country = {
@@ -8,33 +8,45 @@ humiliate_jormarn = {
 	}
 	
 	warscore_cost = {
-		base = 45
-
-		scaled_modifier = {
-			scope = parameter:country
-			add = 0.5
-			calc = pop_count
-		}
-
+		
+		#scaled_modifier = {
+		#	scope = fromfromfrom
+		#	div = 0.02 
+		#	calc = planets_in_country
+		#}
+		#scaled_modifier = {
+		#	scope = parameter:country
+		#	add = 0.5
+		#	calc = pop_count
+		#}
 		#Fitz: Not sure how this works but it seems to give more or less realistic hummiliate score
 		# I suppose it divise by 0.001 for each pop in the empire ASKING for humiliation.
 		# It's to make possible for big empire to humiliate another big empire.
 		# Could be fun to make it harder to humiliate empire that are too small ?
 		# Also a max at 70 could be cool if we find how to do it..
-
 		# Or maybe make it that if you manage to force a bigger empire to surrender, you can pay influence point to humiliate them? :)
 		# Will look if it's possible.
-
-		
 		#jormarn: 0.001 fills my error log with division-by-zero errors - maybe this has something to do with the operating system ?? 
-		# turned it off for now
+		# replaced with planets_in_country in similar weighting
 		
 		
-		#scaled_modifier = {
-		#	scope = fromfromfrom
-		#	div = 0.001 
-		#	calc = pop_count
-		#}
+		
+		
+		base = 35
+		
+		scaled_modifier = {
+			scope = fromfromfrom
+			div = 0.02 
+			calc = planets_in_country
+		}
+		scaled_modifier = {
+			scope = parameter:country
+			add = 0.5
+			calc = pop_count
+		}
+		
+			
+		
 		
 		# Ruler Trait - Warlike
 		modifier = {
@@ -176,13 +188,20 @@ humiliate_jormarn = {
 	}
 	
 	ai_weight = {
-		base = 80
+		base = 20
 		
 		modifier = {
 			factor = 0
 			this = { is_domineering_to = parameter:country } 
 		}
-		
+		modifier = { # if the AI REALLY REALLY hates you...
+			factor = 1.25
+			opinion = {
+					who = FROM
+					value < -100
+			
+			}
+		}
 		
 		modifier = {
 			factor = 0
@@ -195,7 +214,7 @@ humiliate_jormarn = {
 		}	
 		modifier = {
 			factor = 0
-			this = { has_ai_personality = fanatical_purifiers }
+			this = { has_ai_personality = fanatic_purifiers }
 		}	
 		modifier = {
 			factor = 0

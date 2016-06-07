@@ -1,6 +1,6 @@
 ## Rescue the pop of your species
 rescue = {
-	execution_order = 2
+	execution_order = 0
 	
 	parameters = {
 		planet = {
@@ -16,6 +16,12 @@ rescue = {
 			scope = parameter:planet
 			add = 0.8
 			calc = pop_count
+		}
+		
+		scaled_modifier = {
+			scope = parameter:planet.owner
+			div = 0.05
+			calc = planets_in_country
 		}
 
 
@@ -59,19 +65,24 @@ rescue = {
 	}
 	
 	potential = {
-	
+		#hidden:fromfromfrom = { #this also doesn't work, cannot use save_event_target_as in potential ??
+		#	#owner_main_species = { save_event_target_as = species_ben }
+		#	save_event_target_as = benefactor
+		#}
+			
+			
 		custom_tooltip_fail = {      ##This seems to work
 			text = "war_demand_rescue_rescuees"
 			parameter:planet = {
 				any_pop = { 
-				is_same_species = fromfromfrom # fromfromfrom has issues here ?!?
+					is_same_species = ROOT # fromfromfrom has issues here ?!?
 				}
 			}
 		}
 		
 		custom_tooltip_fail = {
 			text = "war_demand_rescue_room"
-			fromfromfrom = {
+			ROOT = {					  # here as well, why though ??
 				any_owned_planet = {
 					free_pop_tiles > 0
 				}
@@ -167,7 +178,7 @@ rescue = {
 	}
 	
 	ai_weight = {
-		base = 75
+		base = 35
 		
 		modifier = {
 			factor = 2
@@ -175,8 +186,21 @@ rescue = {
 				this = { has_ai_personality_behaviour = liberator } 
 				this = { has_ai_personality_behaviour = opportunist } 
 				this = { has_ai_personality_behaviour = migrator } 
+				this = { has_ai_personality = harmonious_hierarchy }
+				this = { has_ai_personality = hive_mind }
 			}
 			
+		}
+		
+		modifier = {
+			factor = 0
+			this = { 
+				NOT = {
+					any_owned_planet = {
+						free_pop_tiles > 10
+					}
+				}
+			}
 		}
 
 

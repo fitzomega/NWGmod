@@ -1,5 +1,5 @@
 make_democracy = {
-	execution_order = 1
+	execution_order = 3
 	
 	parameters = {
 		country = {
@@ -153,14 +153,14 @@ make_democracy = {
 	#}
 	
 	ai_weight = {
-		base = 120
+		base = 50
 		
 		modifier = {
 			factor = 0.01
 			this = { NOT = { has_ai_personality = democratic_crusaders } } 
 		}
 		modifier = {
-			factor = 5
+			factor = 10
 			this = { has_ai_personality = federation_builders } 
 		}
 

@@ -1,7 +1,7 @@
 ## Change a planet biome to nuked. Destroy every building, Kill 5 pop + every pop non resistent to tomb world (like.. everyone :) ).
 
 nuke = {
-	execution_order = 0
+	execution_order = 1
 	
 	parameters = {
 		planet = {
@@ -15,8 +15,14 @@ nuke = {
 
 		scaled_modifier = {
 			scope = parameter:planet
-			add = 0.8
+			add = 1.2
 			calc = pop_count
+		}
+		
+		scaled_modifier = {
+			scope = parameter:planet.owner
+			div = 0.03
+			calc = planets_in_country
 		}
 	
 		modifier = {
@@ -275,25 +281,25 @@ nuke = {
 	}
 	
 	ai_weight = {
-		base = 85
+		base = 20
 		
 
 		modifier = {
-			factor = 0.1
+			factor = 0.2
 			NOT = { 
 				this = { has_ai_personality_behaviour = dominator } 
 				opinion = {
 					who = FROM
-					value > -75
+					value < -150
 				}
 			}
 		}
 		
 		modifier = { # if the AI REALLY REALLY hates you...
-			factor = 15
+			factor = 2
 			opinion = {
 					who = FROM
-					value < -350
+					value < -500
 			
 			}
 		}
@@ -302,9 +308,11 @@ nuke = {
 
 		modifier = {
 			factor = 0
-			is_country_type = fallen_empire
-			has_policy_flag = orbital_bombardement_light
-			has_policy_flag = orbital_bombardement_limited
+			OR = {	
+				is_country_type = fallen_empire
+				has_policy_flag = orbital_bombardement_light
+				has_policy_flag = orbital_bombardement_limited
+			}
 		}
 		
 		

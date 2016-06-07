@@ -1,5 +1,5 @@
 raid_minerals = {
-	execution_order = 10
+	execution_order = 3
 	
 	parameters = {
 		country = {
@@ -126,13 +126,22 @@ raid_minerals = {
 		#thanks :) 
 		parameter:country = {
 			fn_wardemand_steal_mineral = yes
-			fn_wardemand_steal_mineral = yes
-			fn_wardemand_steal_mineral = yes
-			fn_wardemand_steal_mineral = yes
-			fn_wardemand_steal_mineral = yes #5	
-			
-			
-			
+			if = {
+				limit = { years_passed > 50 }
+				fn_wardemand_steal_mineral = yes
+			}
+			if = {
+				limit = { years_passed > 75 }
+				fn_wardemand_steal_mineral = yes
+			}
+			if = {
+				limit = { years_passed > 100 }
+				fn_wardemand_steal_mineral = yes
+			}
+			if = {
+				limit = { years_passed > 150 }
+				fn_wardemand_steal_mineral = yes
+			}
 		}
 		
 		
@@ -143,13 +152,21 @@ raid_minerals = {
 	#}
 	
 	ai_weight = {
-		base = 45
+		base = 15
 		
 		modifier = {
-			factor = 2
+			factor = 1.5
 			this = { has_ai_personality = ruthless_capitalists } 
 		}
-		
+		modifier = {
+			factor = 1.5
+			this = { 					
+				has_country_resource = {
+					type = minerals
+					amount < 1000	
+				} 
+			} 
+		}
 		
 		modifier = {
 			factor = 0
@@ -160,7 +177,7 @@ raid_minerals = {
 			this = { has_ai_personality = honorbound_warriors }
 		}	
 		modifier = {
-			factor = 2
+			factor = 1.25
 			this = { has_ai_personality_behaviour =  opportunist }
 		}	
 	}

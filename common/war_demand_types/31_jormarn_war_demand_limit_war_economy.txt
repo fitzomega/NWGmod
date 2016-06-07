@@ -1,5 +1,5 @@
 policy_limit_war_economy = {
-	execution_order = 1
+	execution_order = 3
 	
 	parameters = {
 		country = {
@@ -172,25 +172,45 @@ policy_limit_war_economy = {
 	#}
 	
 	ai_weight = {
-		base = 10
+		base = 3
 		
 		modifier = {
 			factor = 10
-			this = { has_ai_personality = peaceful_traders } 
+			this = { 
+				OR = {
+					has_ai_personality = peaceful_traders 
+					has_ai_personality = federation_builders 
+					has_ai_personality = spiritual_seekers
+					has_ai_personality = migrating_flock
+				} 
+			}
 		}
-		modifier = {
-			factor = 10
-			this = { has_ai_personality = federation_builders } 
-		}
-		modifier = {
-			factor = 10
-			this = { has_ai_personality = spiritual_seekers }  
-		}
+		
 		
 		modifier = {
 			factor = 0
 			is_country_type = fallen_empire
 		}
+		
+		modifier = {
+			factor = 0.5
+			FROM = {
+				is_at_war = no
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			this = {
+				NOT = {
+					OR = {
+						is_wary_to = FROM
+						is_threatened_to = FROM
+					}
+				}
+			}
+		}
+		
 		## add military interventionists when they are ingame
 
 	}

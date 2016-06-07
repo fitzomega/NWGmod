@@ -1,7 +1,7 @@
 ### Ruin every buildings on a planet.
 
 raze = {
-	execution_order = 5
+	execution_order = 0
 	
 	parameters = {
 		planet = {
@@ -18,7 +18,13 @@ raze = {
 			add = 0.8
 			calc = pop_count
 		}
-	
+		
+		scaled_modifier = {
+			scope = parameter:planet.owner
+			div = 0.05
+			calc = planets_in_country
+		}
+		
 		modifier = {
 			factor = 1.5
 			hidden:parameter:planet = {
@@ -149,7 +155,7 @@ raze = {
 		#}	
 	}
 	
-	demandable = {						# needs to have boots on the ground to raze
+	demandable = {						# needs to have boots on the ground to raze ##update to 1.1 ?
 		custom_tooltip_fail = {
 			text = "war_demand_raze_planet_not_under_our_control"
 			parameter:planet = {
@@ -247,7 +253,7 @@ raze = {
 	}
 	
 	ai_weight = {
-		base = 75
+		base = 50
 		
 
 		modifier = {
@@ -260,6 +266,12 @@ raze = {
 			}
 		}
 
+		scaled_modifier = {
+			scope = parameter:planet
+			div = 2
+			calc = planet_distance_empire
+		}
+		
 
 		modifier = {
 			factor = 0

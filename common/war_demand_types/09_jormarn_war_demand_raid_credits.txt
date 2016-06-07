@@ -1,5 +1,5 @@
 raid_credits = {
-	execution_order = 10
+	execution_order = 3
 	
 	parameters = {
 		country = {
@@ -126,11 +126,23 @@ raid_credits = {
 		# ty :)
 		
 		parameter:country = {
-			fn_wardemand_steal_energy = yes		
-			fn_wardemand_steal_energy = yes		
-			fn_wardemand_steal_energy = yes		
-			fn_wardemand_steal_energy = yes		
-			fn_wardemand_steal_energy = yes #5
+			fn_wardemand_steal_energy = yes
+			if = {
+				limit = { years_passed > 50 }
+				fn_wardemand_steal_energy = yes
+			}
+			if = {
+				limit = { years_passed > 75 }
+				fn_wardemand_steal_energy = yes
+			}
+			if = {
+				limit = { years_passed > 100 }
+				fn_wardemand_steal_energy = yes
+			}
+			if = {
+				limit = { years_passed > 150 }
+				fn_wardemand_steal_energy = yes
+			}
 		}
 		
 		
@@ -141,13 +153,21 @@ raid_credits = {
 	#}
 	
 	ai_weight = {
-		base = 45
+		base = 15
 		
 		modifier = {
-			factor = 2
+			factor = 1.5
 			this = { has_ai_personality = ruthless_capitalists } 
 		}
-		
+		modifier = {
+			factor = 1.5
+			this = { 					
+				has_country_resource = {
+					type = energy
+					amount < 1000	
+				} 
+			} 
+		}
 		
 		modifier = {
 			factor = 0
@@ -158,7 +178,7 @@ raid_credits = {
 			this = { has_ai_personality = honorbound_warriors }
 		}	
 		modifier = {
-			factor = 2
+			factor = 1.25
 			this = { has_ai_personality_behaviour =  opportunist }
 		}	
 	}

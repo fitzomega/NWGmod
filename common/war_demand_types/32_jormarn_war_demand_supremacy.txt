@@ -1,5 +1,5 @@
 supremacy = {
-	execution_order = 0
+	execution_order = 10
 	
 	parameters = {
 		country = {
@@ -199,10 +199,10 @@ supremacy = {
 	
 	
 	ai_weight = {
-		base = 10
+		base = 1
 		
 		modifier = {
-			factor = 25
+			factor = 250
 			this = { has_ai_personality = hegemonic_imperialists } 
 		}
 

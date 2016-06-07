@@ -1,7 +1,7 @@
 #War demand that forces a worse version of free thoughts 
 
 fitz_force_free_thoughts = {
-	execution_order = 0
+	execution_order = 3
 	
 	parameters = {
 		country = {
@@ -153,25 +153,25 @@ fitz_force_free_thoughts = {
 	}
 	
 	ai_weight = {
-		base = 80
+		base = 25
 		
 		modifier = {
-			factor = 2
+			factor = 1.5
 			this = { has_ai_personality = erudite_explorers }
 		}	
 		modifier = {
-			factor = 2
+			factor = 1.5
 			this = { has_ai_personality = democratic_crusaders }
 		}
-		modifier = {
-			factor = 3
-			this = { has_ai_personality = fallen_empire_materialist }
-		}
+		#modifier = {
+		#	factor = 2
+		#	this = { has_ai_personality = fallen_empire_materialist }
+		#}
 		modifier = {
 			factor = 0
 			AND = {
 				is_country_type = fallen_empire
-				NOT = {	this = { has_ai_personality = fallen_empire_materialist }	}
+				#NOT = {	this = { has_ai_personality = fallen_empire_materialist }	}
 			}
 		}
 		

@@ -1,7 +1,7 @@
 #War demand that steal percentage of sciences 
 
 fitz_hack_technology = {
-	execution_order = 0
+	execution_order = 3
 	
 	parameters = {
 		country = {
@@ -133,36 +133,39 @@ fitz_hack_technology = {
 	}
 	
 	ai_weight = {
-		base = 80
+		base = 15
 		
 		modifier = {
-			factor = 2
-			this = { has_ai_personality = erudite_explorers }
+			factor = 1.5
+			this = { 
+				OR = {
+					has_ai_personality = erudite_explorers 
+					has_ai_personality = metalhead
+					has_ai_personality = peaceful_traders
+				}
+			}
 		}
 
 		modifier = {
-			factor = 2
-			this = { has_ai_personality = metalhead }
-		}
-
-		modifier = {
-			factor = 2
-			this = { has_ai_personality = peaceful_traders }
-		}
-
-		modifier = {
-			factor = 4
+			factor = 1.25
 			this = { has_ethic = ethic_materialist }
 		}
 
 		modifier = {
-			factor = 6
+			factor = 1.5
 			this = { has_ethic = ethic_fanatic_materialist }
 		}
 
 		modifier = {
 			factor = 0
 			is_country_type = fallen_empire
+		}
+		
+		modifier = {
+			factor = 0
+			this = {
+				has_modifier = fitz_hacking
+			}
 		}
 		
 	}

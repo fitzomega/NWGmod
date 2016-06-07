@@ -35,12 +35,13 @@
  war_demand_raze_tooltip_proper_content:2 "[parameter:planet.GetName] will be razed and every building will be ruined by commando units [GetCountry.GetName]. Collateral damage will not accounted for. Famine will rage across the globe!\n(Requires the planet to be occupied by an Assault Army)\n\nOwned by: §H[parameter:planet.GetOwnerName]§!\nControlled by: §H[parameter:planet.GetControllerName]§!"
  war_demand_raze_belongs_to_opponent:0 "Planet doesn't belong to our opponents"
  war_demand_raze_no_vassals:0 "Vassals are only allowed to declare wars for independence."
+ war_demand_raze_planet_not_under_our_control:3 "Planet has to be occupied by our armies."
  #Demilitarize
  DEMAND_DEMILITARIZE:0 " Demilitarize $PLANET|H$"
  DEMAND_DEMILITARIZE_TITLE:0 "§Demilitarize§!: $PLANET|H$"
  DEMAND_DEMILITARIZE_INFO:0 "The planet will be demilitarized by our troops. Their machines of war will be destroyed. This includes mines and powerplants. Any dangerous scientific laboratories wil be disbanded. "
  DEMAND_DEMILITARIZE_INFO_SOLO:0 "This planet will be demilitarized. Their machines of war will be destroyed. This includes mines and powerplants. Any dangerous scientific laboratories wil be disbanded."
- war_demand_demilitarize_header:1 "§RDemilitarize Planet§!"
+ war_demand_demilitarize_header:1 "§GDemilitarize Planet§!"
  war_demand_demilitarize_subtext:1 "[parameter:planet.GetName] ([parameter:planet.GetStarName])"
  war_demand_demilitarize_tooltip_header:0 "Demilitarize Planet"
  war_demand_demilitarize_tooltip_content:2 "Demilitarize [parameter:planet.GetName]. Troops of [GetCountry.GetName] will disband dangerous scientific laboratories, stop war material mining operations and shutdown weaponized powerplants."
@@ -63,6 +64,7 @@
  war_demand_nuke_belongs_to_opponent:0 "Planet doesn't belong to our opponents"
  war_demand_nuke_not_under_our_control:3 "Planetary defenses have to be disabled in ground assault."
  war_demand_nuke_no_vassals:0 "No nukes for newbeans. Sorry."
+ war_demand_nuke_planet_not_under_our_control:3 "Planet has to be occupied by our armies."
  #Rescue
  DEMAND_RESCUE:0 "Rescue our people from $PLANET|H$"
  DEMAND_RESCUE_TITLE:0 "§GRescue§!: $POPULATION|H$"
@@ -223,12 +225,12 @@
  #4) allow AI ##
  DEMAND_POLICY_ALLOW_AI:0 "Full AI Rights "
  DEMAND_POLICY_ALLOW_AI_TITLE:0 "$DEMAND_POLICY_ALLOW_AI$"
- DEMAND_POLICY_ALLOW_AI_INFO:0 "All intelligent synthetic lifeforms will be given the rights of an ordinary citizen. For 10 years this empire will be unable to change this."
+ DEMAND_POLICY_ALLOW_AI_INFO:0 "All intelligent synthetic lifeforms will be given ordinary citizen rights. For 10 years this empire will be unable to change this."
  DEMAND_POLICY_ALLOW_AI_INFO_SOLO:0 "$DEMAND_POLICY_ALLOW_AI_INFO$"
  war_demand_policy_allow_ai_header:1 "§GAbolish Artificial Intelligence§!"
  war_demand_policy_allow_ai_subtext:1 "[parameter:country.GetName]"
  war_demand_policy_allow_ai_tooltip_header:0 "$war_demand_policy_allow_ai_header$"
- war_demand_policy_allow_ai_tooltip_content:2 "All intelligent synthetic lifeforms in the [paramter:country.GetName] will be given the rights of an ordinary citizen. For 10 years they will be unable to change this."
+ war_demand_policy_allow_ai_tooltip_content:2 "All intelligent synthetic lifeforms in the [parameter:country.GetName] will be given ordinary citizen rights. For 10 years they will be unable to change this."
  war_demand_policy_allow_ai_tooltip_proper_header:1 "$war_demand_policy_allow_ai_header$"
  war_demand_policy_allow_ai_tooltip_proper_content:2 "$war_demand_policy_allow_ai_tooltip_content$"
  #5) limit migration ##
@@ -302,7 +304,26 @@
  war_demand_xenoplague_tooltip_proper_content:2 "$war_demand_xenoplague_tooltip_content$"
  war_demand_xenoplague_wrong_type:0 "Our military experts are unsure if our plague will have any effect here."
  war_demand_xenoplague_vassalize:0 "We cannot vassalize an empire that will be wiped out after the war."
- 
+ # Resettlement
+ DEMAND_RESETTLE:0 "Resettle the population of $PLANET|H$"
+ DEMAND_RESETTLE_TITLE:0 "§YResettle§ $POPULATION|H$"
+ DEMAND_RESETTLE_INFO:0 "All inhabitants of this planet will be forcibly resettled, if there is any planet in their friendly territory that can receive them."
+ DEMAND_RESETTLE_INFO_SOLO:0 "All inhabitants of this planet will be forcibly resettled, if there is any planet in their friendly territory that can receive them."
+ war_demand_resettle_header:1 "§YResettle Population§!"
+ war_demand_resettle_subtext:1 "[parameter:planet.GetName] ([parameter:planet.GetStarName])"
+ war_demand_resettle_tooltip_header:0 "Resettle Population"
+ war_demand_resettle_tooltip_content:2 "The inhabitants of [parameter:planet.GetName] will be forcibly resettled. However this will only continue as long as they have friendly territory to flee to."
+ war_demand_resettle_tooltip_proper_header:1 "$war_demand_resettle_header$"
+ war_demand_resettle_tooltip_proper_content:2 "The inhabitants of [parameter:planet.GetName] will be forcibly resettled. However this will only continue as long as they have friendly territory to flee to."
+# Cede Frontier outpost
+ war_demand_jormarn_cede_frontier_outpost_header:0 "Cede Frontier Outpost"
+ war_demand_jormarn_cede_frontier_outpost_subtext:0 "[parameter:system.GetName]"
+ war_demand_jormarn_cede_frontier_outpost_tooltip_header:0 "$war_demand_jormarn_cede_frontier_outpost_header$"
+ war_demand_jormarn_cede_frontier_outpost_tooltip_content:0 "Cede the frontier outpost in the [parameter:system.GetName] System"
+ war_demand_jormarn_cede_frontier_outpost_tooltip_proper_header:0 "$war_demand_jormarn_cede_frontier_outpost_header$"
+ war_demand_jormarn_cede_frontier_outpost_tooltip_proper_content:0 "Cede the frontier outpost in the [parameter:system.GetName] System to [GetCountry.GetName]"
+ war_demand_jormarn_cede_frontier_outpost_no_stations:0 "There is no frontier outpost in the system owned by an opponent"
+ war_demand_jormarn_cede_frontier_outpost_no_stations_left:1 "All the Empires who own stations in the system are set to be fully annexed"
  
  
  

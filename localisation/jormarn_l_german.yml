@@ -36,12 +36,13 @@
  war_demand_raze_tooltip_proper_content:2 "Dieser Planet wird verwüstet und jedes Gebäude wird zerstört. Seuchen und Hunger werden die Überlebenden heimsuchen. Alle Gebäude auf [parameter:planet.GetName] werden von Truppen aus [GetCountry.GetName] zerstört.!"
  war_demand_raze_belongs_to_opponent:0 "Dieser Planet gehört nicht unseren Kriegsgegnern."
  war_demand_raze_no_vassals:0 "Vasallen dürfen lediglich Kriege für ihre Unabhängigkeit kämpfen."
+ war_demand_raze_planet_not_under_our_control:0 "Planet muss von feindlichen Armeen besetzt sein."
  #Demilitarize
  DEMAND_DEMILITARIZE:0 "$PLANET|H$ demilitarisieren "
  DEMAND_DEMILITARIZE_TITLE:0 " $PLANET|H$ §Gdemilitarisieren§!"
  DEMAND_DEMILITARIZE_INFO:0 "Dieser Planet wird von unseren Truppen demilitarisiert. Unsere Maßnahmen beinhalten die Stilllegung von kriegswichtigen Minen, Kraftwerken und die Stilllegung unethischer Forschungslabore. "
  DEMAND_DEMILITARIZE_INFO_SOLO:0 "Dieser Planet wird von unseren Truppen demilitarisiert und die meisten Gebäude werden unbenutzbar gemacht."
- war_demand_demilitarize_header:1 "§RPlanet demilitarisieren§!"
+ war_demand_demilitarize_header:1 "§GPlanet demilitarisieren§!"
  war_demand_demilitarize_subtext:1 "[parameter:planet.GetName] ([parameter:planet.GetStarName])"
  war_demand_demilitarize_tooltip_header:0 "Planet demilitarisieren"
  war_demand_demilitarize_tooltip_content:2 "Spezialkommandos aus [GetCountry.GetName] werden alle kriegswichtigen Gebäude auf [parameter:planet.GetName] stilllegen!"
@@ -64,6 +65,7 @@
  war_demand_nuke_belongs_to_opponent:0 "Planet doesn't belong to our opponents"
  war_demand_nuke_not_under_our_control:3 "Dieser Planet gehört nicht unseren Kriegsgegnern."
  war_demand_nuke_no_vassals:0 "Keine Nukes für Newbeans. Nicht mal bei Ev0ke."
+ war_demand_nuke_planet_not_under_our_control:0 "Planet muss von feindlichen Armeen besetzt sein."
  #Rescue
  DEMAND_RESCUE:0 "Rette unser Volk von $PLANET|H$"
  DEMAND_RESCUE_TITLE:0 "§GRette§! unser $Volk|H$"
@@ -289,6 +291,30 @@
  war_demand_xenoplague_tooltip_proper_content:2 "$war_demand_xenoplague_tooltip_content$"
  war_demand_xenoplague_wrong_type:0 "Unsere Experten sind sich unsicher, ob unsere Plage hier Erfolg haben wird."
  war_demand_xenoplague_vassalize:0 "Wir können kein Reich unterjochen, das nach dem Krieg ausgelöscht sein wird."
+ # Resettlement
+ DEMAND_RESETTLE:0 "Bevölkerung umsiedeln"
+ DEMAND_RESETTLE_TITLE:0 "§YBevölkerung umsiedeln§"
+ DEMAND_RESETTLE_INFO:0 "Alle Bewohner dieses Planets werden zwangsumgesiedelt, so lange, wie es Platz für sie in freundlichem Territorium gibt."
+ DEMAND_RESETTLE_INFO_SOLO:0 "Alle Bewohner dieses Planets werden zwangsumgesiedelt, so lange, wie es Platz für sie in freundlichem Territorium gibt."
+ war_demand_resettle_header:1 "§YBevölkerung umsiedeln§!"
+ war_demand_resettle_subtext:1 "[parameter:planet.GetName] ([parameter:planet.GetStarName])"
+ war_demand_resettle_tooltip_header:0 "Bevölkerung umsiedeln"
+ war_demand_resettle_tooltip_content:2 "Die Bevölkerung von [parameter:planet.GetName] wird zwangsumgesiedelt. Dieser Prozess wird alle Populationen vom Planeten entfernen, vorrausgesetzt es gibt freundliches Territorium in das sie fliehen können."
+ war_demand_resettle_tooltip_proper_header:1 "$war_demand_resettle_header$"
+ war_demand_resettle_tooltip_proper_content:2 "Die Bevölkerung von [parameter:planet.GetName] wird zwangsumgesiedelt. Dieser Prozess wird alle Populationen vom Planeten entfernen, vorrausgesetzt es gibt freundliches Territorium in das sie fliehen können."
+ # Cede Frontier outpost
+ war_demand_jormarn_cede_frontier_outpost_header:0 "Außenposten abtreten"
+ war_demand_jormarn_cede_frontier_outpost_subtext:0 "[parameter:system.GetName]"
+ war_demand_jormarn_cede_frontier_outpost_tooltip_header:0 "$war_demand_jormarn_cede_frontier_outpost_header$"
+ war_demand_jormarn_cede_frontier_outpost_tooltip_content:0 "Den Grenzposten im [parameter:system.GetName]-System abtreten."
+ war_demand_jormarn_cede_frontier_outpost_tooltip_proper_header:0 "$war_demand_jormarn_cede_frontier_outpost_header$"
+ war_demand_jormarn_cede_frontier_outpost_tooltip_proper_content:0 "Den Grenzposten im [parameter:system.GetName]-System an [GetCountry.GetName] abtreten."
+ war_demand_jormarn_cede_frontier_outpost_no_stations:0 "Im System gibt es keine Außenposten im Besitz eines Feindes.."
+ war_demand_jormarn_cede_frontier_outpost_no_stations_left:0 "Alle Reiche, die im System Stationen unterhalten, werden vollständig annektiert."
+ 
+ 
+ 
+ 
  
  
  #some custom_tool_fail

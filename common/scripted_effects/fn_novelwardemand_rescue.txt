@@ -1,6 +1,6 @@
 #Rescue one pop from the attacker  
 # this = pop that will be displaced
-# fromfromfrom is target country where they are supposed to be transferred to
+# fromfromfrom is target country where they are supposed to be transferred to ###there is some bug with fromfromfrom in potential, for now exchanged for ROOT
 #
 # Delete  pop on  planet and add to any planet designated 
 #
@@ -11,10 +11,10 @@ fn_novelwardemand_rescue{
 	if = { 
 		limit = {
 			OR = {
-				is_same_species = fromfromfrom
-				is_subspecies = fromfromfrom
+				is_same_species = ROOT
+				is_subspecies = ROOT
 			}
-			fromfromfrom = {		# only take people if there is a nice room prepared
+			ROOT = {		# only take people if there is a nice room prepared
 				any_owned_planet = {
 						free_pop_tiles > 0
 				}
@@ -24,7 +24,7 @@ fn_novelwardemand_rescue{
 		species = { save_event_target_as = saved_species }
 	
 		
-		fromfromfrom = {
+		ROOT = {
 			random_owned_planet = {
 				limit = { 
 					free_pop_tiles > 0

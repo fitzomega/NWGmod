@@ -2,7 +2,7 @@
 #Need a "Slave port" edict to know where the slave are going
 
 kidnap_pops = {
-	execution_order = 2
+	execution_order = 0
 	
 	parameters = {
 		planet = {
@@ -18,6 +18,12 @@ kidnap_pops = {
 			scope = parameter:planet
 			add = 0.8
 			calc = pop_count
+		}
+		
+		scaled_modifier = {
+			scope = parameter:planet.owner
+			div = 0.05
+			calc = planets_in_country
 		}
 	
 		modifier = {
@@ -74,9 +80,9 @@ kidnap_pops = {
 			text = "war_demand_kidnap_not_worth_it"
 			parameter:planet = {
 				num_pops > 3
-				any_pop = { 
-					is_same_species = FROM
-				}
+				#any_pop = {  #obsolete
+				#	is_same_species = FROM
+				#}
 			}
 		}
 		
@@ -135,7 +141,7 @@ kidnap_pops = {
 		#}	
 	}
 	
-	demandable = {						# as if they would come by themselves
+	demandable = {	# as if they would come by themselves ### really unsure whether this should be updated in accordance to 1.1 or not ??
 		custom_tooltip_fail = {
 			text = "war_demand_kidnap_planet_not_under_our_control"
 			parameter:planet = {
@@ -184,7 +190,7 @@ kidnap_pops = {
 	}
 	
 	ai_weight = {
-		base = 100
+		base = 50
 		
 		modifier = { 
 			factor = 0
@@ -212,8 +218,13 @@ kidnap_pops = {
 		}
 		
 		modifier = {
-			factor = 3
-			this = { has_ai_personality = slaving_despots }
+			factor = 2
+			this = { 
+				has_ai_personality = slaving_despots 
+				any_owned_planet = {
+					free_pop_tiles > 10
+				}
+			}
 		}
 	}
 

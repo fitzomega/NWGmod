@@ -1,5 +1,5 @@
 policy_limit_natives = {
-	execution_order = 1
+	execution_order = 3
 	
 	parameters = {
 		country = {
@@ -187,7 +187,7 @@ policy_limit_natives = {
 	#}
 	
 	ai_weight = {
-		base = 10
+		base = 1.5
 		
 		modifier = {
 			factor = 10

@@ -1,6 +1,6 @@
 ##War demand to take planet where some of your species lives. Making Migration out of your border useful :)
 #fitz_unite_species = {
-#	execution_order = 0
+#	execution_order = 3
 #	
 #	parameters = {
 #		planet = {
